@@ -1,3 +1,6 @@
+<div class="return-home">
+	<a href="#/beers"></a>
+</div>
 <h1>Create a beer</h1>
 <hr>
 <p>Want to create a beer in the list ? Let's go guys !</p>
@@ -7,52 +10,52 @@
  <form ng-submit="submit()" ng-controller="BeerCreateCtrl">
  
    <div class="form-group">
-     <label for="name">1- Name:</label>
-     <input type="name" class="form-control" id="name" placeholder="Enter name" value="test" ng-model="name" ng-init="name='name'">
+     <label for="name">Name</label>
+     <input type="name" class="form-control" id="name" placeholder="Enter name" value="test" ng-model="name" >
    </div>
    
    <div class="form-group">
-     <label for="pwd">2- Alcohol:</label>
-     <input type="alcohol" class="form-control" id="alcohol" placeholder="Enter alcohol" ng-model="alcohol" ng-init="alcohol='9'">
+     <label for="pwd">Alcohol</label>
+     <input type="alcohol" class="form-control" id="alcohol" placeholder="Enter alcohol" ng-model="alcohol">
    </div>
    
    <div class="form-group">
-     <label for="pwd">3- Description:</label>
-     <input type="description" class="form-control" id="description" placeholder="Enter description" ng-model="description" ng-init="description='description'">
+     <label for="pwd">Description</label>
+     <input type="description" class="form-control" id="description" placeholder="Enter description" ng-model="description">
    </div>
    <div class="form-group">
-     <label for="pwd">4- id:</label>
-     <input type="id" class="form-control" id="id" placeholder="Enter id" ng-model="id" ng-init="id='id'">
+     <label for="pwd">Id</label>
+     <input type="id" class="form-control" id="id" placeholder="Enter id" ng-model="id">
    </div>
    <div class="form-group">
-     <label for="pwd">5- img:</label>
-     <input type="img" class="form-control" id="img" placeholder="Enter img" ng-model="img" ng-init="img='img'">
+     <label for="pwd">Img</label>
+     <input type="img" class="form-control" id="img" placeholder="Enter img" ng-model="img">
    </div>
    <div class="form-group">
-     <label for="pwd">6- availability:</label>
-     <input type="availability" class="form-control" id="availability" placeholder="Enter availability" ng-model="availability" ng-init="availability='availability'">
+     <label for="pwd">Availability</label>
+     <input type="availability" class="form-control" id="availability" placeholder="Enter availability" ng-model="availability">
    </div>
    <div class="form-group">
-     <label for="pwd">7- bewery:</label>
-     <input type="bewery" class="form-control" id="bewery" placeholder="Enter bewery" ng-model="bewery" ng-init="bewery='bewery'">
+     <label for="pwd">Brewery</label>
+     <input type="brewery" class="form-control" id="brewery" placeholder="Enter brewery" ng-model="brewery">
    </div>
    <div class="form-group">
-     <label for="pwd">8- label:</label>
-     <input type="label" class="form-control" id="label" placeholder="Enter label" ng-model="label" ng-init="label='label'">
+     <label for="pwd">Label</label>
+     <input type="label" class="form-control" id="label" placeholder="Enter label" ng-model="label">
    </div>
    <div class="form-group">
-     <label for="pwd">9- serving:</label>
-     <input type="serving" class="form-control" id="serving" placeholder="Enter serving" ng-model="serving" ng-init="serving='serving'">
+     <label for="pwd">Serving</label>
+     <input type="serving" class="form-control" id="serving" placeholder="Enter serving" ng-model="serving">
    </div>
    <div class="form-group">
-     <label for="pwd">10- style:</label>
-     <input type="style" class="form-control" id="style" placeholder="Enter style" ng-model="style" ng-init="style='style'">
+     <label for="pwd">Style</label>
+     <input type="style" class="form-control" id="style" placeholder="Enter style" ng-model="style">
    </div>     
    
    <!-- <div class="checkbox">
      <label><input type="checkbox"> Remember me</label>
    </div> -->
    <!-- <button type="submit" class="btn btn-default">Submit</button> -->
-   <input type="submit" id="submit" value="Submit" />
+   <input class="button-submit-create" type="submit" id="submit" value="Submit" />
  </form>
 </div>

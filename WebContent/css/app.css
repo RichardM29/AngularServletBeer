@@ -85,7 +85,7 @@ h1 {
 	color: #fff;
 	background: #2b54f3;
 	text-align: center;
-	margin: 20px 0;
+	margin: 20px;
 }
 
 .button-add-beer:hover {
@@ -99,6 +99,8 @@ h1 {
 	width: 150px;
 	color: #fff;
 	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 #form-create-beer label, #form-create-beer input {
@@ -107,4 +109,49 @@ h1 {
 
 .input-description {
 	height: 50px;
+}
+
+.no-float {
+	float: none;
+}
+
+.return-home {
+	display: block;
+	height: 40px;
+	width: 135px;
+	border: 1px solid #dadce4;
+	text-align: left;
+	padding-left: 20px;
+	margin-bottom: 20px;
+}
+
+.return-home ::before {
+	content: "Retour Accueil";
+	color: #36383d;
+	line-height: 40px;
+}
+
+.return-home:hover {
+	background: #dadce4;
+}
+
+.return-home a {
+	height: 50px;
+	width: 135px;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.button-submit-create {
+	height: 40px;
+	width: 135px;
+	color: #36383d;
+	background: #01D758;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.button-submit-create:hover {
+	background: #2E8B57;
+	color: #fff;
 }

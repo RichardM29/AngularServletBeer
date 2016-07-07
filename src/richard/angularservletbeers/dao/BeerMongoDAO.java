@@ -40,7 +40,6 @@ public class BeerMongoDAO {
     	
     	Document doc = collection.find(Filters.eq("id", beerId)).first();
     	
-		beer.setId(doc.getString("id"));
 		beer.setDescription(doc.getString("description"));
 		beer.setImg(doc.getString("img"));
 		beer.setName(doc.getString("name"));
@@ -69,7 +68,6 @@ public class BeerMongoDAO {
     	while (cursor.hasNext()) {
     		Document doc = cursor.next();
     		Beer beer = new Beer();
-    		beer.setId(doc.getString("id"));
     		beer.setDescription(doc.getString("description"));
     		beer.setImg(doc.getString("img"));
     		beer.setName(doc.getString("name"));

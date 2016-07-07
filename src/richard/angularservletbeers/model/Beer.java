@@ -46,9 +46,8 @@ public class Beer {
 	public String getId() {
 		return id;
 	}
-	public void setId(String id) {
-		this.id = id;
-	}
+	// le setID est défini dans setName
+	
 	public String getImg() {
 		return img;
 	}

@@ -10,12 +10,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import richard.angularservletbeers.dao.BeerMongoDAO;
 import richard.angularservletbeers.model.Beer;
 
 /**
  * Servlet implementation class BeerCreate
  */
-@WebServlet("/create")
+@WebServlet("/BeerCreate")
 public class BeerCreate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -55,6 +56,7 @@ public class BeerCreate extends HttpServlet {
 		ObjectMapper mapper = new ObjectMapper();
 		Beer beer = mapper.readValue(beerJSON, Beer.class);
 		
+		BeerMongoDAO.getBeerMongoDAOInstance().insertBeer(beer);
 	}
 
 }
