@@ -87,4 +87,47 @@ public class BeerMongoDAO {
     	
     	return beers;
     }
+
+    public void insertBeer (Beer beer) {
+    	Document doc = generateBeerDocument(beer);
+    	collection.insertOne(doc);
+    }
+    
+    public Document generateBeerDocument(Beer beer) {
+    	Document doc = new Document("name", beer.getName())
+    		.append("id", beer.getId())
+    		.append("alcohol", beer.getAlcohol())
+    		.append("description", beer.getDescription())
+    		.append("img", beer.getImg())
+    		.append("label", beer.getLabel())
+    		.append("availability", beer.getAvailability())
+    		.append("serving", beer.getServing())
+    		.append("style", beer.getStyle())
+    		.append("brewery", beer.getBrewery());
+    	return doc;
+    }
+    
+    public Beer getBeerFromDocument(Document doc) {
+    	Beer beer = new Beer();
+    	beer.setDescription(doc.getString("description"));
+    	beer.setImg(doc.getString("img"));
+    	beer.setName(doc.getString("name"));
+    	Object alcohol = doc.get("alcohol");
+		
+		if (alcohol instanceof Double) {
+			beer.setAlcohol((Double) alcohol);
+		} else {
+			beer.setAlcohol((int) alcohol);
+		}
+		
+		beer.setLabel(doc.getString("label"));
+    	beer.setAvailability(doc.getString("availability"));
+    	beer.setServing(doc.getString("serving"));
+    	beer.setStyle(doc.getString("Style"));
+    	beer.setBrewery(doc.getString("brewery"));
+    	
+    	return beer;
+    }
+
+
 }
